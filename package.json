@@ -1,0 +1,25 @@
+{
+  "name": "CurrentWeather",
+  "version": "1.0.0",
+  "description": "finds the current weather based on lat long",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "webpack": "cd client & webpack -w"
+  },
+  "keywords": [],
+  "author": "Dominic Fraser",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "nodemon": "^1.14.8",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
