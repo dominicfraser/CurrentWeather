@@ -6,7 +6,7 @@ class WeatherInformation {
       .then((data) => {
         document.getElementById('temperature').innerText = data.main.temp
         document.getElementById('description').innerText = data.weather[0].description
-        document.getElementById('icon').src = data.weather[0].icon
+        document.getElementById('icon').src = data.weather[0].icon //TODO handle no icon provided
       })
       .catch((err) => console.log(err))
   }
