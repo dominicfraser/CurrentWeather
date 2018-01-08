@@ -1,12 +1,11 @@
 import WeatherInformation from './weatherInformation'
-import LocationGetter from './locationGetter'
 
 window.addEventListener('load', () => {
 
   const weatherInformation = new WeatherInformation()
-  weatherInformation.getWeather()
 
-  const locationGetter = new LocationGetter()
-  locationGetter.getLocation()
+  weatherInformation.getWeather(weatherInformation.defaultLat, weatherInformation.defaultLong)
+
+  weatherInformation.getLocation()
 
 })
