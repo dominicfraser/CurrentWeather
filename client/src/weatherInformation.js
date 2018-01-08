@@ -5,7 +5,7 @@ class WeatherInformation {
     this.currentLat = this.defaultLat
     this.currentLong = this.defaultLong
 
-    this.getCurrentLocationWeather = this.getCurrentLocationWeather.bind(this)
+    this.updateCurrentWeather = this.updateCurrentWeather.bind(this)
   }
 
   getWeather(lat, long){
@@ -26,7 +26,7 @@ class WeatherInformation {
     document.getElementById("latlong").innerText = "Could not get geolocation"
   }
 
-  getCurrentLocationWeather(position){
+  updateCurrentWeather(position){
     this.currentLat = position.coords.latitude
     this.currentLong = position.coords.longitude
 
@@ -36,8 +36,8 @@ class WeatherInformation {
     this.getWeather(this.currentLat, this.currentLong)
   }
   
-  getLocation(callback) {
-    navigator.geolocation.getCurrentPosition(this.getCurrentLocationWeather, this.displayError)
+  getCurrentLocationWeather(callback) {
+    navigator.geolocation.getCurrentPosition(this.updateCurrentWeather, this.displayError)
   }
 
 }

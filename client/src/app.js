@@ -6,6 +6,7 @@ window.addEventListener('load', () => {
 
   weatherInformation.getWeather(weatherInformation.defaultLat, weatherInformation.defaultLong)
 
-  weatherInformation.getLocation()
+  document.getElementById('my_weather').onclick = weatherInformation.getCurrentLocationWeather()
 
 })
+
